@@ -94,3 +94,27 @@ document.querySelector('.contact h4').textContent = 'Contact';
  })
 
  document.querySelector('footer p').textContent = "Copyright Great Idea! 2018";
+
+const navLinks = document.querySelectorAll('nav a');
+console.log(navLinks);
+
+navLinks.forEach((a)=>{
+a.style.color = 'green';
+})
+
+var nav = document.querySelector('nav');
+
+let newLink = document.createElement('a');
+
+// let newText = document.createTextNode('Fun Stuff');
+
+// newLink.appendChild(newText);
+
+newLink.textContent = 'Fun Stuff';
+let otherLink = document.createElement('a');
+
+otherLink.textContent = 'Boring stuff';
+
+nav.prepend(otherLink);
+nav.appendChild(newLink);
+
