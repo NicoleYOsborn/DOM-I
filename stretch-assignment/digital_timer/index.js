@@ -14,6 +14,12 @@ var body = document.querySelector("body");
 body.appendChild(startButton);
 body.appendChild(stopButton);
 
+var intervalID ;
+
+startButton.addEventListener("click", function(){
+    intervalID = window.setInterval(stopWatch, 10);
+} )
+
 var digits = document.querySelectorAll(".digit")
 
 msTens = 0;
@@ -49,11 +55,12 @@ function stopWatch(){
         document.querySelector(".digits").classList.add("redDigit");
         clearInterval(intervalID)
     };
+    
 }
 
 
 
-let intervalID = window.setInterval(stopWatch, 10);
+// let intervalID = window.setInterval(stopWatch, 10);
 
 function clear(interval){
     clearInterval(interval)
@@ -65,12 +72,8 @@ function clear(interval){
 
 // let intervalID;
 
-// startButton.addEventListener("click", function(){
-//     intervalID = setInterval(function(){
-//        count += 1;
-//        msTens.textContent = count;
-//     }, 10)
-// })
+
+
 
 // console.log(secondOnes.textContent);
 
